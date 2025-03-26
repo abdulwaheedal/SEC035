@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #262626;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 600;
+    color: #0095f6;
+    margin-bottom: 30px;
+    font-family: 'Billabong', cursive; /* Instagram-like font; you'll need to import it or use a similar one */
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+    font-size: 14px;
+    outline: none;
+}
+
+.login-form input:focus {
+    border-color: #a0a0a0;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 8px;
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-btn:disabled {
+    background-color: #b2dffc;
+    cursor: not-allowed;
+}
+
+.login-btn:hover:not(:disabled) {
+    background-color: #0077c9;
+}
+
+/* Divider */
+.divider {
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider span {
+    background-color: #fff;
+    padding: 0 10px;
+    color: #8e8e8e;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+/* Links */
+.forgot-password {
+    display: block;
+    color: #00376b;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.signup-text {
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.signup-link {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #8e8e8e;
+    font-size: 12px;
+}
