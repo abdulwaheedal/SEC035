@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Add Book Form */
+.add-book {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.add-book h2 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#bookForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#bookForm input, #bookForm select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    min-width: 200px;
+}
+
+#bookForm button {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bookForm button:hover {
+    background-color: #34495e;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#searchInput, #filterCategory {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+}
+
+/* Book List */
+.book-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-list h2 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#bookContainer {
+    display: grid;
+    gap: 15px;
+}
+
+.book-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.book-card.read {
+    background-color: #e0f7fa;
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.book-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.book-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.book-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.toggle-read {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.toggle-read:hover {
+    background-color: #218838;
+}
+
+.delete-book {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-book:hover {
+    background-color: #c82333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e9ecef;
+    color: #666;
+    font-size: 14px;
+}
