@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Weather Dashboard</h1>
+            <div class="search-bar">
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+
+        <!-- Current Weather -->
+        <section class="current-weather" id="currentWeather">
+            <h2>Current Weather</h2>
+            <div class="weather-card">
+                <div class="weather-icon" id="currentIcon"></div>
+                <div class="weather-details">
+                    <h3 id="cityName">City Name</h3>
+                    <p id="currentTemp">Temperature: --°C</p>
+                    <p id="currentDesc">Description: --</p>
+                    <p id="currentHumidity">Humidity: --%</p>
+                    <p id="currentWind">Wind: -- m/s</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5-Day Forecast -->
+        <section class="forecast" id="forecast">
+            <h2>5-Day Forecast</h2>
+            <div class="forecast-container" id="forecastContainer">
+                <!-- Forecast cards will be added dynamically -->
+            </div>
+        </section>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage" style="display: none;">
+            <p>City not found. Please try again.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Weather Dashboard. Powered by OpenWeatherMap.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
