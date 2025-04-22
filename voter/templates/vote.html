@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote for Cats or Dogs</title>
+</head>
+<body>
+    <h2>Vote for your favorite!</h2>
+    <button onclick="submitVote('cats')">🐱 Cats</button>
+    <button onclick="submitVote('dogs')">🐶 Dogs</button>
+
+    <h3>Live Results:</h3>
+    <p id="catVotes">Cats: 0</p>
+    <p id="dogVotes">Dogs: 0</p>
+
+    <script>
+        async function submitVote(animal) {
+            const response = await fetch('/vote', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ vote: animal })
+            });
+            const data = await response.json();
+            updateResults(data);
+        }
+
+        async function getResults() {
+            const response = await fetch('/results');
+            const data = await response.json();
+            updateResults(data);
+        }
+
+        function updateResults(data) {
+            document.getElementById('catVotes').innerText = 'Cats: ' + data.cats;
+            document.getElementById('dogVotes').innerText = 'Dogs: ' + data.dogs;
+        }
+
+        // Poll every 3 seconds for live updates
+        setInterval(getResults, 3000);
+        getResults(); // Initial call
+    </script>
+</body>
+</html>
