@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Counter</title>
+</head>
+<body>
+    <h2>Live Counter</h2>
+    <p>Count: <span id="counter">0</span></p>
+    <button onclick="incrementCounter()">Increment</button>
+
+    <script>
+        async function incrementCounter() {
+            const response = await fetch('/increment', {
+                method: 'POST'
+            });
+            const data = await response.json();
+            document.getElementById('counter').innerText = data.count;
+        }
+    </script>
+</body>
+</html>
